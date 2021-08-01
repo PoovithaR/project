@@ -1,0 +1,24 @@
+<html>
+<body>
+<title>registration detail</title>
+<tr>
+    <td>user name</td><br>
+<td> abi </td><br>
+<td> anu </td>
+
+   </tr>
+
+<?php
+
+include "dbConn.php";
+$records = mysqli_query($db,"select * from registration");
+
+while($data = mysqli_fetch_array($records))
+{
+?>
+  <tr>
+    <td><?php echo $data['user name']; ?></td>
+  </tr>	
+<?php
+</body>
+</html>
